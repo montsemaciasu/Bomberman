@@ -2,9 +2,14 @@ class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.interval = null;
+
+    this.audio = new Audio("/assets/audio/bombItMusic.mp3");
+    this.audio.volume = 0.03;
   }
 
   start() {
+    this.audio.play();
+
     this.bombsEnemy = [];
     this.bombsPlayer = [];
     this.box = new Box(this.ctx);
@@ -34,7 +39,7 @@ class Game {
 
   gameOver() {
     if (this.isGameOver) return; // Evita la ejecución si ya es Game Over
-    this.isGameOver = true; // Marca que el juego ha terminado
+    this.isGameOver = true;
     this.pause();
     if (!this.player.isAlive) {
       document.getElementById("gameOverModal").style.display = "flex";
@@ -45,6 +50,7 @@ class Game {
   }
 
   pause() {
+    this.audio.pause();
     clearInterval(this.interval);
   }
 
