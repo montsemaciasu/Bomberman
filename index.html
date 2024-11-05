@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="height: 100%; background-image: url(/assets/images/background.png)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bomberman</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="intro-modal" id="introModal">
+      <div class="intro">
+        <h1>WELCOME TO BOMBERMAN!</h1>
+        <button id="startGameBtn">Start Game</button>
+        <button id="howToPlayBtn">How to Play</button>
+      </div>
+    </div>
+    <div class="how-to-play-modal" id="howToPlayModal">
+      <div class="how-to-play">
+        <h1>HOW TO PLAY</h1>
+        <img
+          src="/assets/images/howToPlay.png"
+          style="height: 300px; width: 600px; z-index: 10000"
+        />
+        <button id="backBtn">Back</button>
+      </div>
+    </div>
+
+    <div class="game-win-modal" id="gameWinModal">
+      <div class="game-win">
+        <h1>YOU WIN! CONGRATULATIONS</h1>
+        <button id="restartWinGameBtn">Restart</button>
+      </div>
+    </div>
+
+    <div class="game-over-modal" id="gameOverModal">
+      <div class="game-over">
+        <h1>GAME OVER! YOU LOSE</h1>
+        <button id="restartGameBtn">Restart</button>
+      </div>
+    </div>
+    <canvas id="board" width="910" height="770"></canvas>
+    <script src="/assets/js/constants.js"></script>
+    <script src="/assets/js/laser.js"></script>
+    <script src="/assets/js/explosion.js"></script>
+    <script src="/assets/js/box.js"></script>
+    <script src="/assets/js/destructible.js"></script>
+    <script src="/assets/js/bomb.js"></script>
+    <script src="/assets/js/enemy.js"></script>
+    <script src="/assets/js/player.js"></script>
+    <script src="/assets/js/game.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
