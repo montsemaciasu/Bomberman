@@ -45,7 +45,7 @@ class Destructible {
     for (let sector of sectors) {
       let boxesInSector = 0;
 
-      while (boxesInSector < 7) {
+      while (boxesInSector < 5) {
         let x =
           Math.floor(Math.random() * ((sector.xMax - sector.xMin) / 70)) * 70 +
           sector.xMin;

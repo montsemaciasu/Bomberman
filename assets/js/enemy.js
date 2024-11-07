@@ -49,7 +49,7 @@ class Enemy {
     this.failedAttempts = 0;
     this.stepsInSameDirection = 0;
 
-    this.bombTimerDefault = 450;
+    this.bombTimerDefault = 650;
     this.bombTimer = this.bombTimerDefault;
   }
 
